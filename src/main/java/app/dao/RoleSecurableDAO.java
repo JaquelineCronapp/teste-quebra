@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("app-RoleSecurableDAO")
+@Repository("RoleSecurableDAO")
 @Transactional(transactionManager="app-TransactionManager")
 public interface RoleSecurableDAO extends JpaRepository<RoleSecurable, java.lang.String> {
 

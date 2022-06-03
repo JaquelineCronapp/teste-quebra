@@ -1,0 +1,25 @@
+<ion-view class="pane"> 
+  <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+    <div class="buttons buttons-left header-item"> 
+       
+    </div> 
+    <h1 class="title">Meu time</h1> 
+    <div class="buttons buttons-right header-item"> 
+       
+    </div> 
+  </ion-header-bar> 
+  <ion-content data-component="crn-ion-content" class="scroll-content has-header"> 
+    <datasource name="Team" entity="fc.Team" keys="_objectKey" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;logo&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true}]" condition=""></datasource>
+    <div class="item item-input" data-component="crn-input" id="crn-input-319356">
+      <input aria-label="Aria Label Text" id="crn-input8248" type="text" placeholder="Nome do Time" ng-model="vars.teamName" mask="" keyboard="">
+    </div>
+    <div class="item item-input" data-component="crn-input" id="crn-input-494551">
+      <input aria-label="Aria Label Text" id="crn-input3114" type="text" placeholder="Nome do dono do time" ng-model="vars.ownerName" mask="" keyboard="">
+    </div>
+    <div class="item item-input item-select" data-component="crn-dynamic-select" id="crn-dynamic-select-505540">
+      <span class="input-label">Time favorito</span>
+      <select aria-label="Seleção Dinâmica" ng-model="vars.team" crn-datasource="Team" id="dynamic-select-9029" name="dynamic-select-9029" xkey-field="id" xdisplay-field="name"><option value="">None</option></select>
+    </div>
+    <button class="button button-block button-default button-medium filled" type="submit" xattr-fullsize="button-block" xattr-theme="button-default" ng-click="cronapi.client('js.blockly.MyTeam.Next').run()" data-component="crn-button" xattr-size="button-medium" xattr-type="filled" id="crn-button-123028"><i class="ion ion-checkmark-circled" xattr-icon-theme=""></i> <span>Avançar</span></button>
+  </ion-content> 
+</ion-view>

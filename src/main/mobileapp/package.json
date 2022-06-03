@@ -1,8 +1,8 @@
 {
-  "name": "io.cronapp.apps.projetonovodiretodaidea",
-  "displayName": "projeto novo direto da ide-a",
+  "name": "io.cronapp.apps.cronappfc",
+  "displayName": "CronappFC",
   "version": "1.0.0",
-  "description": "projeto novo direto da ide-a",
+  "description": "CronappFC",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

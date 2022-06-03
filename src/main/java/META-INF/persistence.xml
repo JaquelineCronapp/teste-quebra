@@ -19,4 +19,17 @@
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>
     </persistence-unit>
+    <persistence-unit name="fc" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
+        <class>fc.entity.Position</class>
+        <class>fc.entity.Player</class>
+        <class>fc.entity.MyTeam</class>
+        <class>fc.entity.Team</class>
+        <class>fc.entity.Transaction</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="cronapp.diagram.namespace" value="fc"/>
+        </properties>
+    </persistence-unit>
 </persistence>

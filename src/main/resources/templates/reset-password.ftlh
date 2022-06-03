@@ -62,15 +62,6 @@
       .text-center {
         text-align: center;
       }
-
-      .authentication-code {
-          font-weight: bold;
-          font-size: 18px;
-      }
-
-      .authentication-code span {
-          margin: 0 4px 0 4px;
-      }
     </style>
 </head>
 
@@ -87,12 +78,7 @@
               A password reset request was generated for ${email}.
             </p>
             <p>
-                <#if oneTimePassword?has_content>
-                    <div class="authentication-code">${oneTimePassword[0..2]}<span></span>${oneTimePassword[3..5]}<span></span>${oneTimePassword[6..8]}</div>
-                    This is your Authentication Code. Use it on your device to reset your password
-                <#else>
-                    <a href="${link}">Click here to reset your password</a>
-                </#if>
+                <a href="${link}">Click here to reset your password</a>
             </p>
             <p>
               If you did not make this request, please ignore this message and your old password will continue to work.

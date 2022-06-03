@@ -1,0 +1,11 @@
+/**** POSITION *****/
+select CONCAT('{"id": "', p.id, '", "name":"',p.name,  '", "_class": "fc.entity.Position" },')  from POSITION p
+
+/*** TEAM ****/
+select CONCAT(' {"id":"',id,'", "name":"',name,'", "logo":"", "_class": "fc.entity.Team"}, ') from TEAM
+
+/*** PLAYER ***/
+select CONCAT(' {"id": "',id,'", "name": "',name,'", "team": { "id": "',fk_team,'"}, "position": { "id": "',fk_position,'"}, "oldPrice": 0, "price": 0, "totalGamesPlayed": 0, "img": "",  "_class": "fc.entity.Player"}, ') from PLAYER p  
+{"id": "020EB95B-DBD7-4E8F-9C08-67882502802C", "name": "VITINHO", "team": { "id": "E0D0E174-AFDC-4ECD-808A-7A5AB53E4E09"}, "position": { "id": "DF1CAD4F-2FE1-44A7-A933-3E80C08D916E"}, "oldPrice": 0, "price": 0, "totalGamesPlayed": 0, "img": "",  "_class": "fc.entity.Player"},
+
+

@@ -11,18 +11,20 @@
   <link rel="stylesheet" href="node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"> 
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="node_modules/angular-ui-notification/dist/angular-ui-notification.min.css"> 
-  <link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-js/css/themes/material.min.css"> 
   <script src="js/customModules.js"></script> 
   <link rel="stylesheet" href="css/app.css"> 
-  <title ng-bind="$root.viewTitle">projeto novo direto da ide-a</title> 
+  <title ng-bind="$root.viewTitle">CronappFC</title> 
   <script src="js/customStateProvider.js"></script> 
   <link rel="stylesheet" href="node_modules/pace-js/themes/pace-theme-minimal.css"> 
   <script src="node_modules/cronapp-framework-js/dist/js/stateProvider.js"></script> 
   <script src="node_modules/signature_pad/dist/signature_pad.umd.min.js"></script> 
   <link rel="stylesheet" href="node_modules/angular-timeline/dist/angular-timeline.css"> 
+  <script src="node_modules/angular-timeline/dist/angular-timeline.js"></script> 
+  <link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-js/css/themes/material.min.css"> 
+  <link rel="stylesheet" href="node_modules/pace/themes/pace-theme-minimal.css"> 
  </head> 
  <body> 
-  <input type="hidden" id="projectName" value="projeto novo direto da ide-a"> 
+  <input type="hidden" id="projectName" value="CronappFC"> 
   <div ui-view class="fill"></div> 
   <!-- Modal Template --> 
   <div id="modalTemplateContext" ng-include="'node_modules/cronapi-js/include/modal.view.html'"></div> 
@@ -69,7 +71,7 @@
   <script src="node_modules/cronapp-framework-js/dist/js/services.js"></script> 
   <script src="node_modules/cronapp-framework-js/dist/js/LocaleService.js"></script> 
   <script src="node_modules/cronapp-framework-js/dist/js/LanguageSelectDirective.js"></script> 
-  <script src="node_modules/cronapp-framework-js/dist/js/directives.js"></script> 
+  <script src="node_modules/cronapp-framework-js/js/directives.js"></script> 
   <script src="node_modules/cronapp-framework-js/dist/js/filters.js"></script> 
   <!-- CronApp Reports --> 
   <script src="node_modules/cronapp-framework-js/dist/js/reports/parameters.controller.js"></script> 
@@ -86,16 +88,15 @@
   <script src="node_modules/cronapp-framework-js/dist/js/upload.service.js"></script> 
   <script src="node_modules/cronapp-framework-js/dist/components/js/format.min.js"></script> 
   <script src="js/system-events.js"></script> 
-  <script src="node_modules/cronapp-framework-js/dist/components/js/qrcode.js"></script>  
+  <script src="node_modules/cronapp-framework-js/dist/components/js/qrcode.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/tinymce/plugins/tinymce/tinymce.min.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/tinymce/plugins/angular-ui-tinymce/dist/tinymce.min.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/kendo.all.fixed.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/cultures/kendo.culture.pt-BR.min.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/jszip.min.js"></script> 
   <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/timezones/kendo.timezones.min.js"></script> 
-  <script src="node_modules/cronapp-framework-js/dist/js/dashboard/dashboard.service.js"></script>   
+  <script src="node_modules/cronapp-framework-js/dist/js/dashboard/dashboard.service.js"></script> 
   <script src="node_modules/ui-select/dist/select.min.js"></script> 
-  <script src="node_modules/angular-timeline/dist/angular-timeline.js"></script> 
   <script src="node_modules/@cronapp/framework-core/cronapp.framework.js"></script>  
  </body>
 </html>

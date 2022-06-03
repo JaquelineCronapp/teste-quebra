@@ -39,7 +39,6 @@
   "Admin.view.Roles": "Funções",
   "Admin.view.UserRole": "Função De Usuário",
   "Admin.view.UserRoles": "Funções De Usuário",
-  "Admin.server.out": "Erro ao contactar o servidor",
   "Home.view.Permission": "Permissão",
   "Home.view.Roles": "Funções",
   "Home.view.Users": "Usuários",
@@ -118,7 +117,6 @@
   "Home.view.tokenRegistered": "Token registrado com sucesso!",
   "Login.view.ServerOff": "O servidor está offline. Por favor, inicie-o novamente.",
   "Login.view.HostAppOff": "Página não encontrada. Verifique se a URL do servidor está correta.",
-  "Login.view.HostAppRequired": "HostApp é obrigatório!",
   "Application": "Aplicação",
   "Error": "Erro",
   "ObjectData": "Dados",
@@ -158,9 +156,5 @@
   "ResetPasswordSuccess": "Successo!",
   "ResetPasswordConfirmation-placeholder": "Confirme sua senha",
   "ResetPasswordNew-placeholder": "Digite sua senha nova",
-  "Submit": "Enviar",
-  "OTPAuthenticationCode": "Código de Autenticação",
-  "AlreadyHaveOTP": "Já possuo um Código de Autenticação",
-  "AllFieldsRequired": "Preencha todos os campos do formulário",
-  "OTPInvalid": "O Código de Autenticação informado é inválido"
+  "Submit": "Enviar"
 }

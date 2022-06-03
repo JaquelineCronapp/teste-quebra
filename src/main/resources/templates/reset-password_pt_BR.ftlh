@@ -62,15 +62,6 @@
       .text-center {
         text-align: center;
       }
-
-      .authentication-code {
-          font-weight: bold;
-          font-size: 18px;
-      }
-
-      .authentication-code span {
-          margin: 0 4px 0 4px;
-      }
     </style>
 </head>
 
@@ -87,12 +78,7 @@
                 Uma solicitação de redefinição de senha foi gerada para ${email}.
             </p>
             <p>
-                <#if oneTimePassword?has_content>
-                    <div class="authentication-code">${oneTimePassword[0..2]}<span></span>${oneTimePassword[3..5]}<span></span>${oneTimePassword[6..8]}</div>
-                    Este é seu Código de Autenticação. Use este código em seu dispositivo para redefinir sua senha
-                <#else>
-                    <a href="${link}">Clique aqui para redefinir sua senha</a>
-                </#if>
+                <a href="${link}">Clique aqui para redefinir sua senha</a>
             </p>
             <p>
                 Se você não fez esta solicitação, por favor ignore esta mensagem e sua senha antiga continuará a

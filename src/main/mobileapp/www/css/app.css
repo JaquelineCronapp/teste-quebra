@@ -2,3 +2,22 @@ ion-content button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.col-xs-2-4 {
+      width: 20%;
+      float: left;
+      position: relative;
+      min-height: 1px;
+}
+.container-balance:after {
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: 54%;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}

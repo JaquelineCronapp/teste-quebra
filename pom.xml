@@ -3,14 +3,14 @@
     <parent>
         <artifactId>cronapp-framework-spring</artifactId>
         <groupId>io.cronapp</groupId>
-        <version>2.9.1-RC.10</version>
+        <version>100.0.0-SNAPSHOT</version>
         <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.cronapp.apps.projetonovodiretodaidea</groupId>
-    <artifactId>io.cronapp.apps.projetonovodiretodaidea</artifactId>
+    <groupId>io.cronapp.apps.cronappfc</groupId>
+    <artifactId>io.cronapp.apps.cronappfc</artifactId>
     <packaging>war</packaging>
-    <name>projeto novo direto da ide-a</name>
+    <name>CronappFC</name>
     <version>1.0-SNAPSHOT</version>
     <url>http://maven.apache.org</url>
     <build>
@@ -133,10 +133,6 @@
     </pluginRepositories>
     <dependencies>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
@@ -211,6 +207,15 @@
             <groupId>io.cronapp</groupId>
             <artifactId>cronapp-framework-auditlog</artifactId>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -218,7 +223,6 @@
         <project.cronospass.resource mimetype="folder/servercontext">config</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/src">src/main/java</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/web">src/main/mobileapp/www</project.cronospass.resource>
-        <project.cronospass.resource mimetype="folder/src">src/main/resources</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/web">src/main/webapp</project.cronospass.resource>
     </properties>
 </project>

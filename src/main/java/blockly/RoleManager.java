@@ -2,60 +2,74 @@ package blockly;
 
 import cronapi.*;
 import cronapi.rest.security.CronappSecurity;
-
 import java.util.concurrent.Callable;
+
 
 
 @CronapiMetaData(type = "blockly")
 @CronappSecurity
 public class RoleManager {
 
-    public static final int TIMEOUT = 300;
+public static final int TIMEOUT = 300;
 
-    /**
-     * RoleManager
-     *
-     * @param Entidade<app.entity.Role>
-     */
-    public static Var BeforeInsert(@ParamMetaData(description = "Entidade", id = "e6bedf99") Var Entidade) throws Exception {
-        return new Callable<Var>() {
+/**
+ *
+ * @param param_Entidade
+ * @return Var
+ */
+// RoleManager
+public static Var BeforeInsert(Var param_Entidade) throws Exception {
+ return new Callable<Var>() {
 
-            public Var call() throws Exception {
-                return
-                        cronapi.authentication.Operations.beforeInsert(Entidade);
-            }
-        }.call();
-    }
+   // param
+   private Var Entidade = param_Entidade;
+   // end
 
-    /**
-     * RoleManager
-     *
-     * @param Entidade<app.entity.Role>
-     */
-    public static Var BeforeUpdate(@ParamMetaData(description = "Entidade", id = "75ee9924") Var Entidade) throws Exception {
-        return new Callable<Var>() {
+   public Var call() throws Exception {
+    Entidade = Var.valueOf(Normalize(Entidade));
+    return Entidade;
+   }
+ }.call();
+}
 
-            public Var call() throws Exception {
-                return
-                        cronapi.authentication.Operations.beforeUpdate(Entidade);
-            }
-        }.call();
-    }
+/**
+ *
+ * @param param_Entidade
+ * @return Var
+ */
+// RoleManager
+public static Var BeforeUpdate(Var param_Entidade) throws Exception {
+ return new Callable<Var>() {
 
-    /**
-     * Descreva esta função...
-     *
-     * @param Entidade<app.entity.Role>
-     */
-    public static Var Normalize(@ParamMetaData(description = "Entidade", id = "989c607f") Var Entidade) throws Exception {
-        return new Callable<Var>() {
+   // param
+   private Var Entidade = param_Entidade;
+   // end
 
-            public Var call() throws Exception {
-                return
-                        cronapi.authentication.Operations.normalize(Entidade);
-            }
-        }.call();
-    }
+   public Var call() throws Exception {
+    Entidade = Var.valueOf(Normalize(Entidade));
+    return Entidade;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @param Entidade
+ * @return Var
+ */
+// Descreva esta função...
+public static Var Normalize(Var Entidade) throws Exception {
+ return new Callable<Var>() {
+
+   private Var item = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    item = cronapi.text.Operations.normalize(cronapi.object.Operations.getObjectField(Entidade, Var.valueOf("name")));
+    cronapi.object.Operations.setObjectField(Entidade, Var.valueOf("normalizedName"), item);
+    return Entidade;
+   }
+ }.call();
+}
 
 }
 

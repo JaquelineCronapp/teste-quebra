@@ -1,0 +1,137 @@
+{
+  "customId": "query691260",
+  "queryName": "AllPlayersByPositionAndPrice",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Player",
+  "entityFullName": "fc.entity.Player",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Player",
+        "namespace": "fc.entity.Player",
+        "alias": "p"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "p",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "p.position.name",
+          "field": "p.position.name",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":positionName",
+          "valueIsField": false
+        },
+        {
+          "id": "p.price",
+          "field": "p.price",
+          "type": "double",
+          "input": "text",
+          "operator": "less_or_equal",
+          "value": ":price",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "positionName",
+      "fieldValue": ""
+    },
+    {
+      "fieldName": "price",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "security": {
+    "id": null,
+    "name": null,
+    "img": null,
+    "team": null,
+    "position": null,
+    "totalGamesPlayed": null,
+    "price": null,
+    "oldPrice": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/fc/query691260/",
+  "audit": false,
+  "swagger": false
+}

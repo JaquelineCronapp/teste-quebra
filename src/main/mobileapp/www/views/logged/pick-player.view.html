@@ -1,0 +1,301 @@
+<div id="starter" ng-init="cronapi.server('blockly.PickPlayer.OnLoad').run(Application)" ng-destroy="" data-component="crn-start" screen-params=""> 
+  <style title="local">
+#crn-heading-723862 { 
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#container-stadium { 
+  background-image: url("img/football-stadium.png");
+  /*background-size: 100%;*/
+  /*height: 400px;*/
+  /*width: 242px;*/
+  background-position: center top;
+  /*  background-size: 100% auto;*/
+  /*background-repeat: no-repeat;*/
+  /*border: 2px solid black;*/
+  /*padding: 25px;*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.container-player{
+    padding: 0px;   
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/*.h2-position {*/
+/*    font-size: 10px;*/
+/*    border-radius: 5px;*/
+/*    background-color: green;*/
+/*    padding: 0px 5px;*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+
+.h2-position {
+    font-size: 10px;
+    border-radius: 5px;
+    background-color: green;
+    margin-left: calc(50% - 22px);
+    width: 60px;
+    color: white;
+    
+    padding: 0px 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.h2-balance {
+    font-size: 10px; 
+    border-radius: 5px; 
+    background-color: white; 
+    margin-left: calc(50% - 25px); 
+    width: fit-content;
+}
+
+
+/*.col-xs-1, .col-xs-2, .col-xs-2-4, .col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12 {*/
+  /*flex-grow: 1;*/
+/*  transition: all 1000ms ease;*/
+/*}*/
+
+
+</style> 
+  <ion-view class="pane" style=""> 
+    <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+      <div class="buttons buttons-left header-item"> 
+        <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button> 
+      </div> 
+      <h1 class="title">Sua escalação</h1> 
+      <div class="buttons buttons-right header-item"> 
+        <button class="button button-clear" menu-toggle="right" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button> 
+      </div> 
+    </ion-header-bar> 
+    <ion-content data-component="crn-ion-content" class="scroll-content has-header"> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="crn-heading-723862" style="height: 10px;">Preço do time</h1> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="crn-heading-93991" style="height: 10px;">Fechamento</h1> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="crn-heading-41261" style="height: 10px;">Saldo atual</h1> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="teamPrice" style="height: 10px;margin-top:0px;">$ 99.31</h1> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="marketClose" style="height: 10px;margin-top:0px;">21/02 - 16:00</h1> 
+      <h1 class="text-center col-xs-4 h5" xattr-position="text-center" xattr-type="h5" data-component="crn-heading" id="balance" style="height: 10px;margin-top:0px;">$ 2.11</h1> 
+      <div data-component="crn-container" data-replace="false" id="crn-container-723060" class="col-xs-12"> 
+        <div class="component-holder ng-scope  col-xs-12" data-component="crn-enterprise-combobox"> 
+          <div class="form-group" id="cron-crn-enterprise-combobox-172946"> 
+            <label for="cron-crn-enterprise-combobox-172946" class="">Esquema tático</label> 
+            <cron-select options="{&quot;headerTemplate&quot;:&quot;&quot;,&quot;template&quot;:&quot;#: data.value #&quot;,&quot;footerTemplate&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;Selecione um item...&quot;,&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;value&quot;,&quot;dataValueField&quot;:&quot;key&quot;,&quot;dynamic&quot;:false,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;type&quot;:&quot;fixed&quot;,&quot;staticDataSource&quot;:[{&quot;key&quot;:&quot;'3-4-3'&quot;,&quot;value&quot;:&quot;3-4-3&quot;},{&quot;key&quot;:&quot;'3-5-2'&quot;,&quot;value&quot;:&quot;3-5-2&quot;},{&quot;key&quot;:&quot;'4-3-3'&quot;,&quot;value&quot;:&quot;4-3-3&quot;},{&quot;key&quot;:&quot;'4-4-2'&quot;,&quot;value&quot;:&quot;4-4-2&quot;},{&quot;key&quot;:&quot;'4-5-1'&quot;,&quot;value&quot;:&quot;4-5-1&quot;},{&quot;key&quot;:&quot;'5-3-2'&quot;,&quot;value&quot;:&quot;5-3-2&quot;},{&quot;key&quot;:&quot;'5-4-1'&quot;,&quot;value&quot;:&quot;5-4-1&quot;}],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;initValue&quot;:&quot;&quot;,&quot;firstValue&quot;:false,&quot;changeCursor&quot;:true,&quot;customTemplate&quot;:true,&quot;dontAllowOutsideList&quot;:true,&quot;fillDatasource&quot;:false}" ng-required="false" id="cron-crn-enterprise-combobox-172946" ng-model="vars.schema" class="crn-select form-control k-textbox" style="" ng-change="cronapi.client('js.blockly.TeamManager.ChangeScheme').run(Application)"> 
+            </cron-select> 
+          </div> 
+        </div> 
+      </div> 
+      <div data-component="crn-container" data-replace="true" id="crn-container-44795" class="col-xs-12"> 
+        <div style="height: 29px; width: 402px;" data-component="crn-spacer" id="crn-spacer-423656" class="col-xs-12">
+           Para vender, pressione em cima do jogador 
+        </div> 
+      </div> 
+      <div data-component="crn-container" data-replace="true" id="container-stadium" class="col-xs-12" style="padding: 15px 15px 0px 0px;"> 
+        <div id="player11" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style="" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player11')" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player11\')')"> 
+          <div id="player11-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player11-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player11-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player11-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player10" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player10\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player10')" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player10-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player10-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player10-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player10-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player9" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player9\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player9')" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player9-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player9-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player9-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player9-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player8" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player8\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player8')" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player8-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player8-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player8-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player8-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player7" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player7\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player7')" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player7-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player7-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player7-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player7-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player6" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player6\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player6')" class="col-xs-4 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player6-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player6-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player6-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player6-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player5" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player5\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player5')" class="col-xs-3 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player5-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player5-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player5-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player5-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player4" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player4\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player4')" class="col-xs-3 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player4-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player4-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player4-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player4-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player3" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player3\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player3')" class="col-xs-3 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player3-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player3-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player3-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player3-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="player2" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player2\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player2')" class="col-xs-3 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player2-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player2-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player2-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player2-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="coach" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'coach\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('coach')" class="col-xs-3 container-player" data-component="crn-container" data-replace="true" style="position: absolute; bottom: 0px; z-index: 999999"> 
+          <div id="coach-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="coach-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="coach-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="coach-position">TÉC</h2> 
+          </div> 
+        </div> 
+        <div id="player1" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'player1\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('player1')" class="col-xs-12 container-player" data-component="crn-container" data-replace="true" style=""> 
+          <div id="player1-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player1-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="player1-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="player1-position">GOL</h2> 
+          </div> 
+        </div> 
+      </div> 
+      <div data-component="crn-container" data-replace="true" id="crn-container-44715" class="col-xs-12"> 
+        <div style="height: 22px; width: 402px;" data-component="crn-spacer" id="crn-spacer-423656" class="col-xs-12">
+           Reservas 
+        </div> 
+      </div> 
+      <div data-component="crn-container" data-replace="true" id="container-reserves" class="col-xs-12" style="padding: 0px;"> 
+        <div id="playerReserve1" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'playerReserve1\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('playerReserve1')" class="container-player col-xs-3" data-component="crn-container" data-replace="true"> 
+          <div id="playerReserve1-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve1-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="playerReserve1-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve1-position">ATA</h2> 
+          </div> 
+        </div> 
+        <div id="playerReserve2" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'playerReserve2\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('playerReserve2')" class="container-player -4  col-xs-3" data-component="crn-container" data-replace="true"> 
+          <div id="playerReserve2-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve2-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="playerReserve2-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve2-position">MEI</h2> 
+          </div> 
+        </div> 
+        <div id="playerReserve3" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'playerReserve3\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('playerReserve3')" class="container-player -4 col-xs-3" data-component="crn-container" data-replace="true"> 
+          <div id="playerReserve3-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve3-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="playerReserve3-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve3-position">ZAG</h2> 
+          </div> 
+        </div> 
+        <div id="playerReserve4" on-hold="$evt('cronapi.client(\'js.blockly.TeamManager.RemovePlayer\').names(\'6e784b3e\').run(\'playerReserve4\')')" ng-click="cronapi.client('js.blockly.TeamManager.ListAllPlayers').names('82d6bb38').run('playerReserve4')" class="container-player -4 col-xs-3" data-component="crn-container" data-replace="true"> 
+          <div id="playerReserve4-container-balance" data-component="crn-container" data-replace="false" class="col-xs-12 container-balance" style="padding: 0px;"> 
+            <h2 class="h2-balance text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve4-balance">$ 0.00</h2> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <img alt="Placehold" src="img/addPlayerGreen.png" class="" style="width: fit-content; margin-left: calc(50% - 15px);" xattr-position="" width="100%" height="" object-fit="object-fit: cover;" data-component="crn-image" id="playerReserve4-image"> 
+          </div> 
+          <div data-component="crn-container" data-replace="false" class="col-xs-12"> 
+            <h2 class="h2-position text-center col-xs-12" xattr-position="text-center" subtitle-size="font-size: 22px;" data-component="crn-label" id="playerReserve4-position">GOL</h2> 
+          </div> 
+        </div> 
+      </div> 
+    </ion-content> 
+  </ion-view> 
+  <script type="text/ng-template" id="modal56373"><ion-modal-view>
+   <ion-header-bar align-title="center" class="bar bar-positive" data-component="crn-ion-header-bar" xattr-theme="bar-positive">
+     <div class="buttons"> <button class="button button-left" ng-click="cronapi.client('js.blockly.TeamManager.CloseModalAllPlayer').run()">Voltar</button> 
+     </div>
+     <h1 class="title">Deslize a esquerda para opções</h1>
+     <div class="buttons">      
+     </div> 
+   </ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+  <datasource data-component="crn-datasource" class="component-holder" name="Player" entity="fc.Player" keys="_objectKey" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;img&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;team&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;totalGamesPlayed&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;price&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;oldPrice&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;team_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" parameters="" dependent-lazy-post="" condition="" lazy="" checkrequired=""></datasource><cron-list options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Player&quot;,&quot;entity&quot;:&quot;fc.Player&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;fc.Player&quot;,&quot;customId&quot;:&quot;Player&quot;,&quot;name&quot;:&quot;Player&quot;,&quot;customQueryName&quot;:&quot;fc.Player&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;fc.entity.Player&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;img&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;team&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;totalGamesPlayed&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;price&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;oldPrice&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;team_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;,&quot;hasError&quot;:false},&quot;keys&quot;:&quot;_objectKey&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;img&quot;,&quot;type&quot;:&quot;Binary&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;team&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;totalGamesPlayed&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;price&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;oldPrice&quot;,&quot;type&quot;:&quot;Double&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;team_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;position_name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;allowPaging&quot;:false,&quot;allowSorting&quot;:false,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:false,&quot;allowRefreshGrid&quot;:false,&quot;allowSelectionRow&quot;:false,&quot;batchMode&quot;:true,&quot;hideModalButtons&quot;:false,&quot;editable&quot;:&quot;inline&quot;,&quot;pathView&quot;:&quot;src/main/mobileapp/www/views/logged/pick-player.view.html&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;id&quot;,&quot;headerText&quot;:&quot;Id&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:true,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;img&quot;,&quot;headerText&quot;:&quot;Img&quot;,&quot;type&quot;:&quot;image&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;name&quot;,&quot;headerText&quot;:&quot;Name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;team&quot;,&quot;headerText&quot;:&quot;Team&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;position&quot;,&quot;headerText&quot;:&quot;Position&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;totalGamesPlayed&quot;,&quot;headerText&quot;:&quot;Total Games Played&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;price&quot;,&quot;headerText&quot;:&quot;Price&quot;,&quot;type&quot;:&quot;number&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:true,&quot;format&quot;:&quot;$ #,##0.00;0&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;type&quot;:&quot;fixed&quot;,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;oldPrice&quot;,&quot;headerText&quot;:&quot;Old Price&quot;,&quot;type&quot;:&quot;number&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;_objectKey&quot;,&quot;headerText&quot;:&quot;Object Key&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:false,&quot;visibleCrud&quot;:false,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:true,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;team_name&quot;,&quot;headerText&quot;:&quot;Team Name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;position_name&quot;,&quot;headerText&quot;:&quot;Position Name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]},{&quot;dataType&quot;:&quot;Customized&quot;,&quot;label&quot;:&quot;Selecionar&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:false,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;iconClass&quot;:&quot;fa fa-child&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;type&quot;:&quot;fixed&quot;,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;execute&quot;:&quot;cronapi.client('js.blockly.TeamManager.SelectPlayer').names('919c63d8').run(Player.active.id)&quot;,&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[],&quot;imageType&quot;:&quot;thumbnail&quot;,&quot;advancedTemplate&quot;:&quot;<ion-list type=\&quot;\&quot; can-swipe=\&quot;listCanSwipe\&quot;>\n\t<ion-item ng-class=\&quot;{'cron-list-selected' :isChecked(rowData)}\&quot; class=\&quot;item {{options.editableButtonClass}} {{options.iconClassPosition}} {{options.imageClassPosition}}\&quot; ng-repeat=\&quot;rowData in datasource\&quot;>\n\t\t<ul ng-if=\&quot;options.allowMultiselect\&quot; class=\&quot;checkbox-group component-holder {{'cron-list-multiselect-' + options.imageType}}\&quot; data-component=\&quot;crn-checkbox\&quot;><label class=\&quot;checkbox\&quot;><input ng-checked=\&quot;isChecked(rowData);\&quot; type=\&quot;checkbox\&quot;></label></ul>\n\t\t<img alt='Thumbnail' ng-if=\&quot;options.imageType !== 'do-not-show' &amp;&amp; rowData[options.fields.image]\&quot; \n\t\t ng-src=\&quot;{{options.isImageFromDropbox ? '' : 'data:image/png;base64,'}}{{rowData[options.fields.image]}}\&quot; class=\&quot;{{options.imageToClassPosition}}\&quot;>\n\t\t<div class=\&quot;{{options.xattrTextPosition}} {{options.textToClassPosition}}\&quot;>\n\t\t\t<h2 ng-if=\&quot;rowData[options.fields.field0]\&quot;>{{rowData[options.fields.field0]|mask:options.fields.mask0:options.fields.type0}}</h2>\n\t\t\t<p class=\&quot;dark\&quot; ng-if=\&quot;rowData[options.fields.field1]\&quot;>{{rowData[options.fields.field1]|mask:options.fields.mask1:options.fields.type1}}</p>\n\t\t\t<p class=\&quot;dark\&quot; ng-if=\&quot;rowData[options.fields.field2]\&quot;>{{rowData[options.fields.field2]|mask:options.fields.mask2:options.fields.type2}}</p>\n\t\t\t<p class=\&quot;dark\&quot; ng-if=\&quot;rowData[options.fields.field3]\&quot;>{{rowData[options.fields.field3]|mask:options.fields.mask3:options.fields.type3}}</p>\n\t\t\t<p class=\&quot;dark\&quot; ng-if=\&quot;rowData[options.fields.field4]\&quot;>{{rowData[options.fields.field4]|mask:options.fields.mask4:options.fields.type4}}</p>\n\t\t\t<p class=\&quot;dark\&quot; ng-if=\&quot;rowData[options.fields.field5]\&quot;>{{rowData[options.fields.field5]|mask:options.fields.mask5:options.fields.type5}}</p>\n\t\t\t<i ng-if=\&quot;options.icon\&quot; class=\&quot;{{options.icon}}\&quot; xattr-theme=\&quot;dark\&quot;></i>\n\t\t</div>\n\t</ion-item>\n</ion-list>\n<ion-infinite-scroll></ion-infinite-scroll>\n&quot;,&quot;searchTemplate&quot;:&quot;<div class=\&quot;item item-input-inset\&quot;>\n\t<div class=\&quot;item-input-wrapper\&quot;><i class=\&quot;icon ion-search placeholder-icon\&quot;></i>\n\t\t<input aria-label=\&quot;{{'template.crud.search' | translate}}\&quot; type=\&quot;text\&quot; ng-model=\&quot;vars.searchableList[options.randomModel]\&quot; cronapp-filter=\&quot;{{options.filterFields}}\&quot; cronapp-filter-operator=\&quot;\&quot; cronapp-filter-caseinsensitive=\&quot;false\&quot; cronapp-filter-autopost=\&quot;true\&quot; crn-datasource=\&quot;{{options.dataSourceScreen.name}}\&quot; placeholder=\&quot;{{'template.crud.search' | translate}}\&quot;>\n\t</div>\n\t<button ng-if=\&quot;showButton()\&quot; ng-click=\&quot;limparSelecao()\&quot; class=\&quot;button-small cron-list-button-clean button button-inline button-positive component-holder\&quot;>\n\t<span cron-list-button-text>Limpar Seleção</span>\n\t</button>\n</div>&quot;,&quot;fillDatasource&quot;:false,&quot;enableModalSaveAdd&quot;:false}" ng-model="vars.cronlist7324" xattr-text-position="text-left" data-component="crn-ion-list" id="crn-ion-list-348224" class=""></cron-list></ion-content>
+  </ion-modal-view></script> 
+</div>

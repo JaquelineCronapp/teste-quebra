@@ -1,7 +1,7 @@
 <div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params="" primary-datasource="Role">
     <h1 class="component-holder text-left h3 title" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-18419">{{"Admin.view.Role" | translate}}</h1>
 
-    <datasource data-component="crn-datasource" filter="" name="Role" entity="app.roleManager" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;builtIn&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;membershipEnabled&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;normalizedName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[{&quot;fieldName&quot;:&quot;applicationId&quot;,&quot;fieldValue&quot;:&quot;&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;OR&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;%&quot;,&quot;left&quot;:&quot;name&quot;,&quot;right&quot;:&quot;{{vars.search|raw}}&quot;,&quot;args&quot;:[]}]}}" lazy="true" on-before-create="" on-before-update=""></datasource>
+    <datasource data-component="crn-datasource" filter="" name="Role" entity="app.roleManager" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;builtIn&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;membershipEnabled&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;normalizedName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" condition="" lazy="true" on-before-create="" on-before-update=""></datasource>
 
             <div role="search" ng-hide="Role.inserting || Role.editing" data-component="crn-textinput" id="crn-datasource-filter-general18419" class="">
                 <div class="form-group">
@@ -47,12 +47,12 @@
                     </div>
                   </div>
                   <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
-                    <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_546355">
+                    <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${RANDOM}">
                       <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
                         <i class="glyphicon glyphicon-ok" icon-theme=""></i>
                       </button>
                     </div>
-                    <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_567324">
+                    <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${RANDOM}">
                       <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
                         <i class="glyphicon  glyphicon-ban-circle" icon-theme=""></i>
                       </button>
